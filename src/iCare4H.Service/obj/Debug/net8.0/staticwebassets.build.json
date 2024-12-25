@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kp59JbzjPma8E8tG0A1XE+qF+FBKlPgegTuSW2WLFSU=",
+  "Source": "iCare4H.Service",
+  "BasePath": "_content/iCare4H.Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
