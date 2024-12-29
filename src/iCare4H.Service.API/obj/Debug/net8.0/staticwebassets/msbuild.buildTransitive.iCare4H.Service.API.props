@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\iCare4H.Service.API.props" />
+</Project>

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\iCare4HService\\iCare4H.Common\\iCare4H.Common.csproj",
-      "projectName": "iCare4H.Common",
-      "projectPath": "D:\\repos\\iCare4HService\\iCare4H.Common\\iCare4H.Common.csproj",
+      "projectUniqueName": "D:\\repos\\icare4hservice\\iCare4H.Common\\iCare4H.Service.Common.csproj",
+      "projectName": "iCare4H.Service.Common",
+      "projectPath": "D:\\repos\\icare4hservice\\iCare4H.Common\\iCare4H.Service.Common.csproj",
       "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\iCare4HService\\iCare4H.Common\\obj\\",
+      "outputPath": "D:\\repos\\icare4hservice\\iCare4H.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

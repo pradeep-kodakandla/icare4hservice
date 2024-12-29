@@ -1,0 +1,12 @@
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\bin\Debug\net8.0\iCare4H.Service.Domain.deps.json
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\bin\Debug\net8.0\iCare4H.Service.Domain.dll
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\bin\Debug\net8.0\iCare4H.Service.Domain.pdb
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.AssemblyInfoInputs.cache
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.AssemblyInfo.cs
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.csproj.CoreCompileInputs.cache
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.sourcelink.json
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.dll
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\refint\iCare4H.Service.Domain.dll
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\iCare4H.Service.Domain.pdb
+D:\repos\icare4hservice\src\iCare4H.Service.Domain\obj\Debug\net8.0\ref\iCare4H.Service.Domain.dll

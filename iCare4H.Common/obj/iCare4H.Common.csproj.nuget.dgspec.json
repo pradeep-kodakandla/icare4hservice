@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\iCare4HService\\iCare4H.Common\\iCare4H.Common.csproj": {}
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\iCare4H.Common\\iCare4H.Common.csproj": {}
   },
   "projects": {
-    "D:\\repos\\iCare4HService\\iCare4H.Common\\iCare4H.Common.csproj": {
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\iCare4H.Common\\iCare4H.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\iCare4HService\\iCare4H.Common\\iCare4H.Common.csproj",
+        "projectUniqueName": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\iCare4H.Common\\iCare4H.Common.csproj",
         "projectName": "iCare4H.Common",
-        "projectPath": "D:\\repos\\iCare4HService\\iCare4H.Common\\iCare4H.Common.csproj",
-        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\iCare4HService\\iCare4H.Common\\obj\\",
+        "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\iCare4H.Common\\iCare4H.Common.csproj",
+        "packagesPath": "C:\\Users\\PradeepKodakandla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\iCare4H.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PradeepKodakandla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
