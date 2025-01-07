@@ -44,7 +44,7 @@ namespace iCare4H.DataAccess
         /// </summary>
         /// <param name="query">query to be executed</param>
         /// <returns></returns>
-        int ExectuteNonQuery(string query);
+        int ExecuteNonQuery(string query);
 
         /// <summary>
         /// This methid takes the input as the query and returns a data reader
@@ -52,6 +52,6 @@ namespace iCare4H.DataAccess
         /// <param name="query">query to be executed</param>
         /// <param name="parmeterWithValues">collection of parameters with values</param>
         /// <returns></returns>
-        int ExectuteNonQuery(string query, Dictionary<string, object> parmeterWithValues);
+        int ExecuteNonQuery(string query, Dictionary<string, object> parmeterWithValues);
     }
 }

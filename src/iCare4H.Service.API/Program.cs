@@ -2,10 +2,15 @@
 using iCare4H.Service.Domain.Interface;
 using iCare4H.Service.Application;
 using iCare4H.Service.Infrastructure.Repository;
+using iCare4H.DataAccess;
+using iCare4H.DataAccess.Impl.Postgres;
+using iCare4H.Service.Domain.Model.AppSettings;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
 var services = builder.Services;
 
+services.Configure<DatabaseConnection>(config.GetSection(nameof(DatabaseConnection)));
 services.AddControllers();
 
 services.AddEndpointsApiExplorer();
@@ -25,10 +30,21 @@ services.AddSwaggerGen(options =>
 
 services.AddAuthorization();
 
+// create instance of data layer
+var dbconfig = config.GetSection(nameof(DatabaseConnection));
+var dataLayer = new PostgresDataLayer(dbconfig[nameof(DatabaseConnection.ServerName)],
+                        dbconfig[nameof(DatabaseConnection.Database)],
+                        dbconfig[nameof(DatabaseConnection.UserName)],
+                        dbconfig[nameof(DatabaseConnection.Password)],
+                        Convert.ToInt32(dbconfig[nameof(DatabaseConnection.Port)]));
+
 //add internal repositories
+services.AddSingleton<IAbstractDataLayer>(dataLayer);
+services.AddScoped<IConfigRepository, ConfigRepository>();
 services.AddScoped<IUserRepository, UserRepository>();
 
 // add internal services
+services.AddScoped<IConfigService, ConfigService>();
 services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();

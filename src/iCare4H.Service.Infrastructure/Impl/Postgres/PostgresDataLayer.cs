@@ -36,13 +36,13 @@ namespace iCare4H.DataAccess.Impl.Postgres
 
         public string ConnectionString => connectionString;
 
-        public int ExectuteNonQuery(string query)
+        public int ExecuteNonQuery(string query)
         {
             return new ComputationRetryer(retryCount, query).Run<Exception, int>(() =>
                         BuildCommandWithParameters(CommandType.Text, query, []).ExecuteNonQuery());
         }
 
-        public int ExectuteNonQuery(string query, Dictionary<string, object> parmeterWithValues)
+        public int ExecuteNonQuery(string query, Dictionary<string, object> parmeterWithValues)
         {
             return new ComputationRetryer(retryCount, query).Run<Exception, int>(() =>
                         BuildCommandWithParameters(CommandType.Text, query, parmeterWithValues).ExecuteNonQuery());
@@ -103,6 +103,7 @@ namespace iCare4H.DataAccess.Impl.Postgres
         {
             var command = new NpgsqlCommand
             {
+                CommandText = query,
                 CommandType = commandType,
                 CommandTimeout = timeOut,
                 Connection = Connection()

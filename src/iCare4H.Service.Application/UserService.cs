@@ -1,4 +1,5 @@
 ﻿using iCare4H.Service.Domain.Interface;
+using iCare4H.Service.Domain.Model;
 using iCare4H.Service.Infrastructure.Repository;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -36,6 +37,14 @@ namespace iCare4H.Service.Application
                 return jwtSecurityToken;
             }
             return string.Empty;
+        }
+
+        public bool AddUser(SecurityUser user, SecurityUserDetail securityUserDetail)
+        {
+            // add security detail first...
+
+            //add user...
+            return true;
         }
     }
 }
