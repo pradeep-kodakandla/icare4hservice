@@ -1,12 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\repos\\icare4hservice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8078D46-9857-4629-90C1-33B8110D04CB}|src\\iCare4H.Service.API\\iCare4H.Service.API.csproj|d:\\repos\\icare4hservice\\src\\icare4h.service.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8078D46-9857-4629-90C1-33B8110D04CB}|src\\iCare4H.Service.API\\iCare4H.Service.API.csproj|solutionrelative:src\\icare4h.service.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.API\\Controllers\\User\\UserController.cs",
+              "RelativeDocumentMoniker": "src\\iCare4H.Service.API\\Controllers\\User\\UserController.cs",
+              "ToolTip": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.API\\Controllers\\User\\UserController.cs",
+              "RelativeToolTip": "src\\iCare4H.Service.API\\Controllers\\User\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T14:05:49.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
