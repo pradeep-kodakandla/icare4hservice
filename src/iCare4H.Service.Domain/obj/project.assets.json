@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\iCare4HService\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
+      "projectUniqueName": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
       "projectName": "iCare4H.Service.Domain",
-      "projectPath": "D:\\repos\\iCare4HService\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
+      "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
       "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
       "outputPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\obj\\",
       "projectStyle": "PackageReference",
