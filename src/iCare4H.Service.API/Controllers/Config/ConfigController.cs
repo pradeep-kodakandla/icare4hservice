@@ -13,6 +13,13 @@ namespace iCare4H.Service.Controllers
         private readonly IConfigService _configService = configService;
 
         [AllowAnonymous]
+        [HttpGet("admin/ping")]
+        public IActionResult PingRequest()
+        {
+            return Ok("Ping worked!!!");
+        }
+
+        [AllowAnonymous]
         [HttpGet("admin/getdata")]
         public IActionResult GetAllUserType([FromQuery] string name)
         {

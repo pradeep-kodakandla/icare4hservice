@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iCare4H.Service.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1ab28b3763e56bcf21b303518a34dca526cbb17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfe318cb37bb33e2ab39c5b5173b291a68d900de")]
 [assembly: System.Reflection.AssemblyProductAttribute("iCare4H.Service.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iCare4H.Service.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
