@@ -1,34 +1,64 @@
 ﻿using iCare4H.Service.Domain.Interface;
 using iCare4H.DataAccess;
+using iCare4H.Service.Domain.Model;
+using System.Collections.Generic;
+using System.Data;
+using Npgsql; // PostgreSQL library
 
 namespace iCare4H.Service.Infrastructure.Repository
 {
-    public class UserRepository(IAbstractDataLayer dataLayer) : IUserRepository
+    public class UserRepository : IUserRepository
     {
-        private readonly IAbstractDataLayer dataLayer = dataLayer;
+        private readonly IAbstractDataLayer _dataLayer;
 
+        public UserRepository(IAbstractDataLayer dataLayer)
+        {
+            _dataLayer = dataLayer;
+        }
+
+        // 🔹 Validate user by checking credentials from PostgreSQL
         public bool ValidateUser(string userName, string password)
         {
-            var sql = $"select * from securityuser where username='{userName}' and activeflag=true";
-            using var reader = dataLayer.ExecuteDataReader(sql);
-            var passWordInternal = string.Empty;
-            while (reader.Read())
+            var sql = "SELECT password FROM securityuser WHERE username=@username AND activeflag=true";
+            var parameters = new Dictionary<string, object>
             {
-                passWordInternal = reader.GetString(SecurityUserIndex.Password);
-            }
-            if (!passWordInternal.Equals(password))
-            {
-                return false;
-            }
-            return true;
-        }
-    }
+                { "@username", userName }
+            };
 
-    public class SecurityUserIndex
-    {
-        public static readonly int UserId = 0;
-        public static readonly int UserDetailId = 1;
-        public static readonly int UserName = 2;
-        public static readonly int Password = 3;
+            using var reader = _dataLayer.ExecuteDataReader(sql, parameters);
+            if (reader.Read())
+            {
+                var storedPassword = reader.GetString(0); // Assuming password is in the first column
+
+                // 🔹 You should use **hashed passwords** in production
+                return storedPassword == password;
+            }
+
+            return false;
+        }
+
+        // 🔹 Get user from PostgreSQL
+        public SecurityUser? GetUser(string username, string password)
+        {
+            var sql = "SELECT userid, userdetailid, username, password FROM securityuser WHERE username=@username AND activeflag=true";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@username", username }
+            };
+
+            using var reader = _dataLayer.ExecuteDataReader(sql, parameters);
+            if (reader.Read())
+            {
+                return new SecurityUser
+                {
+                    UserId = reader.GetInt32(0),
+                    //UserDetailId = reader.GetInt32(1),
+                    UserName = reader.GetString(2),
+                    Password = reader.GetString(3) // 🔹 In production, store **hashed passwords**
+                };
+            }
+
+            return null;
+        }
     }
 }

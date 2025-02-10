@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "iCare4H.Service.Common/1.0.0": {
+        "runtime": {
+          "iCare4H.Service.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "iCare4H.Service.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

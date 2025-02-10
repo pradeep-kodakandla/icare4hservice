@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\iCare4H.Service.Application\iCare4H.Service.Application.csproj" />
     <ProjectReference Include="..\iCare4H.Service.Domain\iCare4H.Service.Domain.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
   </ItemGroup>
 
 </Project>

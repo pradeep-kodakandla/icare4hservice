@@ -1,4 +1,5 @@
 ﻿using iCare4H.Service.Domain.Interface;
+using iCare4H.Service.Domain.Model;
 using iCare4H.Service.Infrastructure.Repository;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -7,35 +8,21 @@ using System.Text;
 
 namespace iCare4H.Service.Application
 {
-    public class UserService(IUserRepository userRepository) : IUserService
+    public class UserService : IUserService
     {
-        private readonly IUserRepository userRepository = userRepository;
+        private readonly IUserRepository _userRepository;
 
-        public string Authenticate(string username, string password)
+        public UserService(IUserRepository userRepository)
         {
-            var isValid = userRepository.ValidateUser(username, password);
-            if (isValid)
-            {
-                // authentication successful so generate jwt token
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes("SomeSecret to be added to config file..111@@##$$56");
-                var tokenDescriptor = new SecurityTokenDescriptor
-                {
-                    Subject = new ClaimsIdentity(new Claim[]
-                    {
-                        new Claim("username", username.ToString()),
-                        // new Claim("currency", user.Currency),
-                        // new Claim("name", user.FullName)
-                    }),
-                    Expires = DateTime.UtcNow.AddDays(7),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-                };
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-                var jwtSecurityToken = tokenHandler.WriteToken(token);
+            _userRepository = userRepository;
+        }
 
-                return jwtSecurityToken;
-            }
-            return string.Empty;
+        public SecurityUser Authenticate(string username, string password)
+        {
+            var user = _userRepository.GetUser(username, password);
+            if (user == null) return null;
+            return user;
         }
     }
 }
+

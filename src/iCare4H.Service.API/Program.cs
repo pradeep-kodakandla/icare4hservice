@@ -1,49 +1,74 @@
-﻿using Swashbuckle.AspNetCore.Filters;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Swashbuckle.AspNetCore.Filters;
 using iCare4H.Service.Domain.Interface;
 using iCare4H.Service.Application;
 using iCare4H.Service.Infrastructure.Repository;
+using iCare4H.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 
 services.AddControllers();
-
 services.AddEndpointsApiExplorer();
 
-//Add Swagger bearer token authentication 
+// 🔹 Register Authentication BEFORE `builder.Build()`
+var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Secret"]); // Read key from appsettings.json
+services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+
+services.AddAuthorization();
+
+// 🔹 Register Swagger with JWT Authentication Support
 services.AddSwaggerGen(options =>
 {
-    options.AddSecurityDefinition("oauth2", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         In = Microsoft.OpenApi.Models.ParameterLocation.Header,
         Name = "Authorization",
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "bearer"
     });
 
     options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
 
-services.AddAuthorization();
+// 🔹 Register Data Layer (Fix for Dependency Injection)
+services.AddScoped<IAbstractDataLayer, AbstractDataLayer>();
 
-//add internal repositories
+// 🔹 Register Repositories
 services.AddScoped<IUserRepository, UserRepository>();
 
-// add internal services
+// 🔹 Register Services
 services.AddScoped<IUserService, UserService>();
 
+// 🔹 Build the app AFTER service registrations
 var app = builder.Build();
 
+// 🔹 Enable Swagger UI in Development Mode
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Configure the HTTP request pipeline.
+// 🔹 Configure Middleware
 app.UseHttpsRedirection();
-
+app.UseAuthentication(); // ✅ Must be BEFORE Authorization
 app.UseAuthorization();
-
 app.MapControllers();
 
+// 🔹 Run the App
 app.Run();

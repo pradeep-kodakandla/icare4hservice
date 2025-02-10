@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj": {}
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj": {}
   },
   "projects": {
-    "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj": {
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj",
+        "projectUniqueName": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj",
         "projectName": "iCare4H.Service.Application",
-        "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj",
-        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Application\\obj\\",
+        "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Application\\iCare4H.Service.Application.csproj",
+        "packagesPath": "C:\\Users\\PradeepKodakandla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PradeepKodakandla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj": {
-                "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj"
+              "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj": {
+                "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj"
               },
-              "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj": {
-                "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj"
+              "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj": {
+                "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj"
               },
-              "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj": {
-                "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj"
+              "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj"
               }
             }
           }
@@ -82,24 +82,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj": {
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj",
+        "projectUniqueName": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj",
         "projectName": "iCare4H.Service.Common",
-        "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj",
-        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\obj\\",
+        "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj",
+        "packagesPath": "C:\\Users\\PradeepKodakandla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PradeepKodakandla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -148,24 +148,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj": {
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
         "projectName": "iCare4H.Service.Domain",
-        "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
-        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\obj\\",
+        "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj",
+        "packagesPath": "C:\\Users\\PradeepKodakandla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PradeepKodakandla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -214,24 +214,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj": {
+    "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj",
         "projectName": "iCare4H.Service.Infrastructure",
-        "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\iCare4H.Service.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\PradeepKodakandla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PradeepKodakandla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -247,11 +247,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj": {
-                "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj"
+              "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj": {
+                "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Common\\iCare4H.Service.Common.csproj"
               },
-              "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj": {
-                "projectPath": "D:\\repos\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj"
+              "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj": {
+                "projectPath": "C:\\Users\\PradeepKodakandla\\Documents\\icare4hservice\\src\\iCare4H.Service.Domain\\iCare4H.Service.Domain.csproj"
               }
             }
           }
@@ -297,7 +297,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
