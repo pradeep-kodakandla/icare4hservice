@@ -22,7 +22,6 @@ namespace iCare4H.Service.Controllers.User
             _configuration = configuration;
         }
 
-        [AllowAnonymous]
         [HttpPost("authenticate")]
         public IActionResult Authenticate([FromBody] Login loginParam)
         {
@@ -40,27 +39,29 @@ namespace iCare4H.Service.Controllers.User
 
             // 🔹 Generate JWT Token
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"]); // Ensure this key exists in appsettings.json
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Secret"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Role, "User")
-            }),
+            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim(ClaimTypes.Role, "User")
+        }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // ✅ Ensure a proper JSON response
-            return Ok(new
+            // ✅ Ensure JSON response and correct Content-Type
+            var response = new
             {
                 Token = tokenString,
                 UserName = user.UserName,
                 Message = "Login successful!"
-            });
+            };
+
+            return new JsonResult(response) { ContentType = "application/json" };
         }
 
         // ✅ Handle CORS Preflight for Angular
