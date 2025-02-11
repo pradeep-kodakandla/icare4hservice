@@ -54,8 +54,26 @@ services.AddScoped<IUserRepository, UserRepository>();
 // 🔹 Register Services
 services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalAngularApp",
+        policy => policy.WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp",
+        policy => policy.WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+});
+
 // 🔹 Build the app AFTER service registrations
 var app = builder.Build();
+app.UseCors("AllowAngularApp");
+app.UseCors("AllowLocalAngularApp");
 
 // 🔹 Enable Swagger UI in Development Mode
 if (app.Environment.IsDevelopment())
