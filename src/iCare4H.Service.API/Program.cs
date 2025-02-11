@@ -54,6 +54,14 @@ services.AddScoped<IUserRepository, UserRepository>();
 // 🔹 Register Services
 services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null; // Ensure JSON format is preserved
+    });
+
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
@@ -80,6 +88,13 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication(); // ✅ Must be BEFORE Authorization
 app.UseAuthorization();
+// ✅ Ensure JSON responses are always returned
+app.Use(async (context, next) =>
+{
+    context.Response.ContentType = "application/json";
+    await next();
+});
+
 app.MapControllers();
 
 // 🔹 Run the App

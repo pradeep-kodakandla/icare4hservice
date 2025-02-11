@@ -53,7 +53,7 @@ namespace iCare4H.Service.Controllers.User
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            // ✅ Ensure JSON response and correct Content-Type
+            // ✅ Ensure JSON response and Content-Type
             var response = new
             {
                 Token = tokenString,
@@ -61,8 +61,10 @@ namespace iCare4H.Service.Controllers.User
                 Message = "Login successful!"
             };
 
+            Response.Headers["Content-Type"] = "application/json";
             return new JsonResult(response) { ContentType = "application/json" };
         }
+
 
         // ✅ Handle CORS Preflight for Angular
         [HttpOptions("authenticate")]
