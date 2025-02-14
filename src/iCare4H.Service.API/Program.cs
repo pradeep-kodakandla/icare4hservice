@@ -60,12 +60,12 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.PropertyNamingPolicy = null; // Ensure JSON format is preserved
     });
 
-
+var allowedOrigins = new[] { "http://localhost:4200", "https://proud-field-09c04620f.5.azurestaticapps.net", "https://prod.angular-app.com" };
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
-        policy => policy.WithOrigins("http://localhost:4200") // Add more origins if needed
+        policy => policy.WithOrigins(allowedOrigins) // Add more origins if needed
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()); // Add this if using authentication (e.g., cookies, JWTs)

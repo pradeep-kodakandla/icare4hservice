@@ -65,12 +65,13 @@ namespace iCare4H.Service.Controllers.User
             return new JsonResult(response) { ContentType = "application/json" };
         }
 
-
+        
         // ✅ Handle CORS Preflight for Angular
         [HttpOptions("authenticate")]
         public IActionResult Preflight()
         {
-            Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:4200");
+            var allowedOrigins = new[] { "http://localhost:4200", "https://proud-field-09c04620f.5.azurestaticapps.net", "https://prod.angular-app.com" };
+            Response.Headers.Add("Access-Control-Allow-Origin", allowedOrigins);
             Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Authorization");
             Response.Headers.Add("Access-Control-Allow-Methods", "POST, OPTIONS");
             return Ok();
