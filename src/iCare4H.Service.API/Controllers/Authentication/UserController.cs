@@ -70,10 +70,19 @@ namespace iCare4H.Service.Controllers.User
         [HttpOptions("authenticate")]
         public IActionResult Preflight()
         {
-            Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            var allowedOrigins = new[] { "http://localhost:4200", "https://proud-field-09c04620f.5.azurestaticapps.net/", "https://prod.angular-app.com" }; // Fetch dynamically if needed
+            var requestOrigin = Request.Headers["Origin"].ToString();
+
+            if (allowedOrigins.Contains(requestOrigin))
+            {
+                Response.Headers.Add("Access-Control-Allow-Origin", requestOrigin);
+            }
             Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Authorization");
             Response.Headers.Add("Access-Control-Allow-Methods", "POST, OPTIONS");
+            Response.Headers.Add("Access-Control-Allow-Credentials", "true");
+
             return Ok();
         }
+
     }
 }
