@@ -14,7 +14,7 @@ services.AddControllers();
 services.AddEndpointsApiExplorer();
 
 // 🔹 Register Authentication BEFORE `builder.Build()`
-var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Secret"]); // Read key from appsettings.json Encoding.ASCII.GetBytes("bP3!x5$G8@r9ZyL2WqT4!bN7eK1sD#uV");//
+var key = Encoding.ASCII.GetBytes("bP3!x5$G8@r9ZyL2WqT4!bN7eK1sD#uV");// Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Secret"]); // Read key from appsettings.json
 services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -61,12 +61,11 @@ builder.Services.AddControllers()
     });
 
 
-var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
-        policy => policy.WithOrigins(allowedOrigins) // Add more origins if needed
+        policy => policy.WithOrigins("http://localhost:4200") // Add more origins if needed
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()); // Add this if using authentication (e.g., cookies, JWTs)
